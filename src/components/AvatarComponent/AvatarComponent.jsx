@@ -5,7 +5,7 @@ import axios from 'axios';
 
 import './AvatarComponents.css';
 
-const TOKEN = 'jZQaL5Xg7UJoETKge0oWdqKxMVBDMBDVo5sMFV7LYjs';
+const TOKEN = 'i_TgiCqBlFumkuYqnhDJpdt6I_gUWwAj4nxHXGvPoyQ';
 
 const AvatarComponent = ({ users }) => {
 	const [avatars, setAvatars] = useState([]);
@@ -16,13 +16,13 @@ const AvatarComponent = ({ users }) => {
 	axios
 		.get(`${apiRoot}/photos/random?client_id=${TOKEN}&count=${users}`)
 		.then(res => setAvatars([...avatars, ...res.data]))
-	}, [avatars, users])
+	}, [])
+	
+	console.log(avatars);
 	return (
 		<Avatar.Group maxCount={7}>
 			{
-				avatars.map((el, idx) =>
-					<Avatar key={ idx } src={el.urls.thumb} />
-				)
+				avatars.map((el, idx) => <Avatar key={ idx } src={el.urls.thumb}/>)
 			}
 		</Avatar.Group>
 	);
