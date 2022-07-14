@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { useSelector } from 'react-redux';
 
@@ -7,11 +7,9 @@ import Head from '../Head/Head';
 
 import './Locations.css';
 import LocationsCard from './LocationsCard';
-import Modal from '../Modal/Modal';
 
 const Locations = () => {
 	const open = useSelector(state => state.open.isOpen);
-	const [openPopUp, setOpenPopUp] = useState(false);
 	
 	return (
 		<div className={open ? "locations open" : "locations"}>

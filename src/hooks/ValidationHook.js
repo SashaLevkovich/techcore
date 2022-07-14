@@ -6,7 +6,7 @@ export const useValidation = (value, validations) => {
 	useEffect(()=>{
 		for ( const validation in validations ) {
 			switch ( validation ) {
-				case 'isEmpty':
+				default:
 					value ? setEmpty(false) : setEmpty(true )
 					break;
 			}

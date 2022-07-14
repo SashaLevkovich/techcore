@@ -3,8 +3,6 @@ import { Avatar } from 'antd';
 
 import axios from 'axios';
 
-import { createUsers } from '../../helpers/createUsers';
-
 import './AvatarComponents.css';
 
 const TOKEN = 'jZQaL5Xg7UJoETKge0oWdqKxMVBDMBDVo5sMFV7LYjs';
@@ -18,11 +16,13 @@ const AvatarComponent = ({ users }) => {
 	axios
 		.get(`${apiRoot}/photos/random?client_id=${TOKEN}&count=${users}`)
 		.then(res => setAvatars([...avatars, ...res.data]))
-	}, [])
+	}, [users])
 	return (
 		<Avatar.Group maxCount={7}>
 			{
-				avatars.map((el, idx) => <Avatar key={ idx } src={el.urls.thumb}/>)
+				avatars.map((el, idx) =>
+					<Avatar key={ idx } src={el.urls.thumb} />
+				)
 			}
 		</Avatar.Group>
 	);
