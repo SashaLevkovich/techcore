@@ -1,0 +1,16 @@
+.ant-select-multiple .ant-select-selection-item {
+	background: #EEF7FC;
+	border-radius: 4px;
+	}
+
+.ant-select-multiple .ant-select-selection-item-remove svg * {
+	fill: #4CBDF2;
+	}
+
+.ant-select-selection-overflow {
+	height : 40px;
+	}
+
+.ant-select-multiple .ant-select-selection-item-content {
+	color: #00A0EC;
+	}

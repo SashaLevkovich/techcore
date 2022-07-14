@@ -1,0 +1,23 @@
+.year {
+	width : 100%;
+	height : 100%;
+	}
+
+.year__container {
+	width : 221px;
+	}
+
+.year__body {
+	display : flex;
+	justify-content : space-between;
+	align-items : center;
+	}
+
+.year__month {
+	width : 145px;
+	}
+
+.year__day {
+	width: 80px;
+	}
+

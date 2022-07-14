@@ -1,0 +1,34 @@
+.warning {
+	display : none;
+	width : 100%;
+	height : 100%;
+	}
+
+.warning.open{
+	display : block;
+	}
+
+.warning__container {
+	width: 470px;
+	height: 32px;
+	padding : 5px;
+	}
+
+.warning__body {
+	display : flex;
+	
+	gap: 8px;
+	}
+
+.warning__body p {
+	width : 400px;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 16px;
+	
+	display: flex;
+	align-items: center;
+	
+	color: #868C98;
+	
+	}

@@ -1,0 +1,58 @@
+.breadcrumbs {
+	width : 100%;
+	height : 16px;
+	margin-bottom : 8px;
+	}
+
+.breadcrumbs__container {
+	height : 16px;
+	}
+
+.breadcrumbs__body {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	}
+
+.breadcrumbs__item {
+	display : flex;
+	justify-content: space-between;
+	align-items : center;
+	
+	font-size: 13px;
+	line-height: 16px;
+	
+	display: flex;
+	align-items: center;
+	text-align: center;
+	letter-spacing: -0.1px;
+	
+	color: #00A0EC;
+	
+	margin-right : 6px;
+	
+	cursor: pointer;
+	}
+
+.breadcrumbs__item:hover {
+	color: #0683DD;
+	transition: all .4s;
+	}
+
+.breadcrumbs__item:hover > svg:first-child *  {
+	fill: #0683DD;
+	transition: all .4s;
+	}
+
+/*.breadcrumbs__item > svg:first-child *  {*/
+/*	transform: scale(0.75);*/
+/*	}*/
+
+.breadcrumbs__item > svg:first-child, .breadcrumbs__item > svg:first-child * {
+	margin-right : 4px;
+	fill: #00A0EC;
+	}
+
+.breadcrumbs__item > svg:last-child{
+	margin-left : 6px;
+	}

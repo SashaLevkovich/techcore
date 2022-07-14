@@ -1,0 +1,22 @@
+.location-form__workweek {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	padding: 0px;
+	gap: 16px;
+	
+	width: 485px;
+	height: 72px;
+	}
+
+.location-form__workweek h5 {
+	width       : 145px;
+	font-weight : 500;
+	font-size   : 13px;
+	line-height : 16px;
+	
+	display     : flex;
+	align-items : center;
+	
+	color       : #1E212A;
+	}

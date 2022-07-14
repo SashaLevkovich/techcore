@@ -1,0 +1,17 @@
+.week-starts {
+	width : 145px;
+	}
+
+.week-starts .select__form {
+	padding: 10px 5px 10px 10px;
+	}
+
+.week-starts .select__options {
+	width: 145px;
+	
+	}
+
+.week-starts .select__options .option {
+	padding-left : 5px;
+	width : 140px;
+	}

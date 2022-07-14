@@ -1,0 +1,19 @@
+.expiry-date {
+	width : 265px;
+	display : flex;
+	align-items : center;
+	justify-content : center;
+	}
+
+.expiry-date .list{
+	width : 242px;
+	}
+
+.expiry-date .info{
+	height: 18px;
+	}
+
+.expiry-date .info .info-popup{
+	top : 235px;
+	right : 415px;
+	}

@@ -1,0 +1,162 @@
+.sidebar {
+	position : relative;
+	height       : 100vh;
+	
+	background   : #F5F9FE;
+	
+	transform: translateX(-220px);
+	transition: all .4s;
+	
+	border-right : 1px solid rgba(46, 91, 255, 0.1);
+	}
+
+.sidebar.open {
+	transform: translateX(-10px);
+	transition: all .4s;
+	}
+
+.sidebar__container {
+	padding : 24px;
+	}
+
+.sidebar__body {
+	width : 100%;
+	height : 100%;
+	}
+
+.sidebar__title {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 120%;
+	
+	color: #AFB6C6;
+	
+	margin : 0 0 16px 0;
+	}
+
+.item {
+	width: 192px;
+	height: 20px;
+	
+	
+	margin-bottom : 20px;
+	}
+
+.item.active .item__title {
+	color: #00A0EC;
+	}
+
+.item__title {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	
+	padding: 0px;
+	gap: 12px;
+	
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 120%;
+	
+	color: #1E212A;
+	
+	cursor: pointer;
+	
+	margin-bottom : 16px;
+	}
+
+.sub {
+	position : absolute;
+	left : 0;
+	
+	width: 240px;
+	height: 62px;
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	padding: 0px;
+	gap: 16px;
+	
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 13px;
+	line-height: 120%;
+	
+	color: #1E212A;
+	}
+
+.sub > li {
+	position : relative;
+	
+	width: 240px;
+	height: 32px;
+	}
+
+.sub > li:hover {
+	background: #EEF7FC;
+	color: #0683DD;
+	transition: all .4s;
+	}
+
+.sub > li.active{
+	color: #00A0EC;
+	transition: all .4s;
+	}
+
+.sub-item {
+	position : absolute;
+	left : 56px;
+	
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	
+	width: 89px;
+	height: 20px;
+	
+	cursor: pointer;
+	}
+
+.sub-item:hover {
+	color: #0683DD;
+	}
+
+.sidebar__arrow {
+	position : absolute;
+	right : -12px;
+	top : 78px;
+	
+	box-sizing: border-box;
+	
+	width: 24px;
+	height: 24px;
+	
+	display : flex;
+	justify-content : center;
+	align-items : center;
+	
+	background: #FFFFFF;
+	border: 1px solid #DFE5F9;
+	
+	box-shadow: 0px 8px 28px rgba(0, 0, 0, 0.05), 2px 2px 15px rgba(0, 44, 175, 0.05);
+	border-radius: 12px;
+	
+	cursor: pointer;
+	}
+
+.sidebar__arrow svg {
+	transform: rotate(180deg);
+	transition: all .3s;
+	}
+
+.sidebar__arrow.open svg {
+	transform: rotate(0deg);
+	transition: all .3s;
+	}

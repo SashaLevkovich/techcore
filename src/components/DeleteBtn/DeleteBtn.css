@@ -1,0 +1,30 @@
+.del-btn {
+	width: 119px;
+	height: 40px;
+	
+	background: linear-gradient(0deg, #F24445, #F24445), #FFFFFF;
+	border-radius: 6px;
+	
+	font-weight: 600;
+	font-size: 13px;
+	line-height: 16px;
+	
+	display: flex;
+	align-items: center;
+	justify-content : center;
+	
+	border: none;
+	
+	color: #FFFFFF;
+	
+	cursor: pointer;
+	}
+
+.del-btn__container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	
+	width: 380px;
+	height: 40px;
+	}
