@@ -1,28 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Avatar } from 'antd';
 
-import axios from 'axios';
 
 import './AvatarComponents.css';
-
-const TOKEN = 'i_TgiCqBlFumkuYqnhDJpdt6I_gUWwAj4nxHXGvPoyQ';
+import { createUsers } from '../../helpers/createUsers';
 
 const AvatarComponent = ({ users }) => {
-	const [avatars, setAvatars] = useState([]);
-	
-	useEffect(()=> {
-	const apiRoot = 'https://api.unsplash.com';
-	
-	axios
-		.get(`${apiRoot}/photos/random?client_id=${TOKEN}&count=${users}`)
-		.then(res => setAvatars([...avatars, ...res.data]))
-	}, [])
-	
-	console.log(avatars);
+	const userArr = Array(users)
+	createUsers(userArr, users)
+	console.log(userArr);
 	return (
 		<Avatar.Group maxCount={7}>
 			{
-				avatars.map((el, idx) => <Avatar key={ idx } src={el.urls.thumb}/>)
+				userArr.map(el => <Avatar key={ el.id } src={el}/>)
 			}
 		</Avatar.Group>
 	);
