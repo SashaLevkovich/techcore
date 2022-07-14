@@ -16,7 +16,7 @@ const AvatarComponent = ({ users }) => {
 	axios
 		.get(`${apiRoot}/photos/random?client_id=${TOKEN}&count=${users}`)
 		.then(res => setAvatars([...avatars, ...res.data]))
-	}, [users])
+	}, [avatars, users])
 	return (
 		<Avatar.Group maxCount={7}>
 			{

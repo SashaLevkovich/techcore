@@ -2,20 +2,30 @@ import { useEffect, useState } from 'react';
 
 export const useValidation = (value, validations) => {
 	const [isEmpty, setEmpty ] = useState(true);
-	
+	const [isLoc, setLoc] = useState(false);
+
 	useEffect(()=>{
 		for ( const validation in validations ) {
 			switch ( validation ) {
-				default:
+				case 'isEmpty':
 					value ? setEmpty(false) : setEmpty(true )
 					break;
+
+				case 'isLoc':
+					const regEmail = /^[a-zA-Z-]/;
+					regEmail.test(value.toLowerCase()) ? setLoc(false) : setLoc(true);
+					break;
+
+				default:
+					return validations
 			}
 		}
-	}, [value]);
-	
-	
+	}, [validations, value]);
+
+
 	return {
-		isEmpty
+		isEmpty,
+		isLoc
 	}
 }
 
